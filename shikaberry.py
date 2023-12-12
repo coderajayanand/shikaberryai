@@ -3,7 +3,6 @@
 # from openai.types.beta import Assistant, AssistantDeleted
 import streamlit as st
 
-import config
 
 col1, col2 = st.columns([1, 2])
 
@@ -30,7 +29,7 @@ import time
 
 class Assistant:
     def __init__(self):
-        self.client = OpenAI(api_key=config.api_key)
+        self.client = OpenAI(api_key=st.secrets[api_key])
         self.assistant = self.create_assistant()  # Create the assistant during initialization
 
     def create_assistant(self):
