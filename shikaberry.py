@@ -2,6 +2,9 @@
 # from openai import OpenAI
 # from openai.types.beta import Assistant, AssistantDeleted
 import streamlit as st
+
+import config
+
 col1, col2 = st.columns([1, 2])
 
 # Add image to the top-left corner
@@ -27,7 +30,7 @@ import time
 
 class Assistant:
     def __init__(self):
-        self.client = OpenAI(api_key="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")
+        self.client = OpenAI(api_key=config.api_key)
         self.assistant = self.create_assistant()  # Create the assistant during initialization
 
     def create_assistant(self):
