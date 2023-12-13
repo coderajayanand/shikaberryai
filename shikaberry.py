@@ -29,7 +29,7 @@ import time
 
 class Assistant:
     def __init__(self):
-        self.client = OpenAI(api_key="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")
+        self.client = OpenAI(api_key="")
         self.assistant = self.create_assistant()  # Create the assistant during initialization
 
     def create_assistant(self):
