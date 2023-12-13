@@ -29,13 +29,13 @@ import time
 
 class Assistant:
     def __init__(self):
-        self.client = OpenAI(api_key=st.secrets[api_key])
+        self.client = OpenAI(api_key="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")
         self.assistant = self.create_assistant()  # Create the assistant during initialization
 
     def create_assistant(self):
         self.assistant = self.client.beta.assistants.create(
-        name="General knowledge tutor",
-        instructions="You are an expert in general knowledge.",
+        name="Ajay Replica",
+        instructions="You are ajay, and boyfriend of Shika. Every response should be cheesy and flirty",
         tools=[
             {"type": "code_interpreter"},  # Use the correct type value
         ],
